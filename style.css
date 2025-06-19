@@ -1,21 +1,23 @@
 body {
   background-color: #f9f9f9;
-  font-family: "Cairo", sans-serif;
+  font-family: 'Cairo', sans-serif;
+  color: #333;
   margin: 0;
   padding: 0;
   direction: rtl;
 }
 
 .container {
-  max-width: 600px;
+  max-width: 700px;
   margin: auto;
   padding: 20px;
   background-color: white;
   min-height: 100vh;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: 8px;
 }
 
-h1 {
+h1, h2 {
   text-align: center;
   color: #2c3e50;
 }
@@ -26,29 +28,56 @@ ul {
 }
 
 li {
-  padding: 12px 20px;
-  margin: 10px 0;
-  background-color: #f1f1f1;
-  border-radius: 8px;
+  background: #eee;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 6px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 button {
-  padding: 6px 12px;
+  padding: 5px 10px;
   border: none;
-  border-radius: 6px;
+  border-radius: 4px;
   cursor: pointer;
+}
+
+.marked {
+  background-color: #27ae60;
+  color: #fff;
+}
+
+.unmarked {
+  background-color: #ccc;
+  color: #000;
+}
+
+progress {
+  width: 100%;
+}
+
+footer {
+  margin-top: 20px;
+  text-align: center;
   font-size: 14px;
+  color: gray;
 }
 
-button.marked {
-  background-color: #2ecc71;
-  color: white;
+/* Dark Mode */
+body.dark {
+  background-color: #333;
+  color: #fff;
 }
 
-button.unmarked {
-  background-color: #bdc3c7;
-  color: black;
+body.dark .container {
+  background-color: #444;
+}
+
+body.dark li {
+  background: #555;
+}
+
+body.dark button {
+  border: 1px solid #888;
 }
